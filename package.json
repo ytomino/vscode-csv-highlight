@@ -3,6 +3,7 @@
 	"displayName": "CSV Highlight",
 	"description": "CSV syntax highlight",
 	"version": "0.0.1",
+	"publisher": "ytomino",
 	"engines": {
 		"vscode": "^1.71.0"
 	},

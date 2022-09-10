@@ -1,31 +1,266 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "CSV",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
+	"patterns": [{
+		"name": "rainbowgroup.csv",
+		"begin": "^(?!$)",
+		"end": "$",
+		"patterns": [{
+			"include": "#1"
+		}]
+	}],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.csv",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.csv",
-			"begin": "\"",
-			"end": "\"",
+		"1": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.csv",
-					"match": "\\\\."
+					"name": "rainbow1.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"begin": ",",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.comma.csv"
+						}
+					},
+					"end": "(?=\\n)",
+					"patterns": [{
+						"include": "#2"
+					}]
 				}
 			]
+		},
+		"2": {
+			"patterns": [
+				{
+					"name": "keyword.rainbow2.csv rainbow2.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"begin": ",",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.comma.csv"
+						}
+					},
+					"end": "(?=\\n)",
+					"patterns": [{
+						"include": "#3"
+					}]
+				}
+			]
+		},
+		"3": {
+			"patterns": [
+				{
+					"name": "entity.name.function.rainbow3.csv rainbow3.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"begin": ",",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.comma.csv"
+						}
+					},
+					"end": "(?=\\n)",
+					"patterns": [{
+						"include": "#4"
+					}]
+				}
+			]
+		},
+		"4": {
+			"patterns": [
+				{
+					"name": "comment.rainbow4.csv rainbow4.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"begin": ",",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.comma.csv"
+						}
+					},
+					"end": "(?=\\n)",
+					"patterns": [{
+						"include": "#5"
+					}]
+				}
+			]
+		},
+		"5": {
+			"patterns": [
+				{
+					"name": "string.rainbow5.csv rainbow5.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"begin": ",",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.comma.csv"
+						}
+					},
+					"end": "(?=\\n)",
+					"patterns": [{
+						"include": "#6"
+					}]
+				}
+			]
+		},
+		"6": {
+			"patterns": [
+				{
+					"name": "variable.parameter.rainbow6.csv rainbow6.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"begin": ",",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.comma.csv"
+						}
+					},
+					"end": "(?=\\n)",
+					"patterns": [{
+						"include": "#7"
+					}]
+				}
+			]
+		},
+		"7": {
+			"patterns": [
+				{
+					"name": "constant.numeric.rainbow7.csv rainbow7.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"begin": ",",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.comma.csv"
+						}
+					},
+					"end": "(?=\\n)",
+					"patterns": [{
+						"include": "#8"
+					}]
+				}
+			]
+		},
+		"8": {
+			"patterns": [
+				{
+					"name": "entity.name.type.rainbow8.csv rainbow8.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"begin": ",",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.comma.csv"
+						}
+					},
+					"end": "(?=\\n)",
+					"patterns": [{
+						"include": "#9"
+					}]
+				}
+			]
+		},
+		"9": {
+			"patterns": [
+				{
+					"name": "markup.bold.rainbow9.csv rainbow9.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"begin": ",",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.comma.csv"
+						}
+					},
+					"end": "(?=\\n)",
+					"patterns": [{
+						"include": "#10"
+					}]
+				}
+			]
+		},
+		"10": {
+			"patterns": [
+				{
+					"name": "invalid.rainbow10.csv rainbow10.csv",
+					"begin": "(?=[^\\n,])",
+					"end": "(?=[\\n,])",
+					"patterns": [{
+						"include": "#string"
+					}]
+				},
+				{
+					"name": "keyword.operator.comma.csv",
+					"match": ","
+				}
+			]
+		},
+		"string": {
+			"patterns": [{
+				"begin": "\"",
+				"beginCaptures": {
+					"0": {
+						"name": "string.quoted.double.csv"
+					}
+				},
+				"end": "\"(?!\")",
+				"endCaptures": {
+					"0": {
+						"name": "string.quoted.double.csv"
+					}
+				},
+				"patterns": [{
+					"name": "constant.character.escape.csv",
+					"match": "\"\""
+				}]
+			}]
 		}
 	},
 	"scopeName": "source.csv"

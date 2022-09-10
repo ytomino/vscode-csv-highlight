@@ -1,7 +1,7 @@
 {
 	"name": "csv-highlight",
 	"displayName": "CSV Highlight",
-	"description": "CSV syntax highlight",
+	"description": "CSV (and TSV) syntax highlight",
 	"version": "0.0.1",
 	"publisher": "ytomino",
 	"engines": {
@@ -11,16 +11,31 @@
 		"Programming Languages"
 	],
 	"contributes": {
-		"languages": [{
-			"id": "csv",
-			"aliases": ["CSV", "csv"],
-			"extensions": [".csv"],
-			"configuration": "./language-configuration.json"
-		}],
-		"grammars": [{
-			"language": "csv",
-			"scopeName": "source.csv",
-			"path": "./syntaxes/csv.tmLanguage.json"
-		}]
+		"languages": [
+			{
+				"id": "csv",
+				"aliases": ["CSV", "csv"],
+				"extensions": [".csv"],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "tsv",
+				"aliases": ["TSV", "tsv"],
+				"extensions": [".tsv"],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "csv",
+				"scopeName": "source.csv",
+				"path": "./syntaxes/csv.tmLanguage.json"
+			},
+			{
+				"language": "tsv",
+				"scopeName": "source.csv",
+				"path": "./syntaxes/tsv.tmLanguage.json"
+			}
+		]
 	}
 }

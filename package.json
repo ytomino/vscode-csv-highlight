@@ -33,7 +33,7 @@
 			},
 			{
 				"language": "tsv",
-				"scopeName": "source.csv",
+				"scopeName": "source.tsv",
 				"path": "./syntaxes/tsv.tmLanguage.json"
 			}
 		]

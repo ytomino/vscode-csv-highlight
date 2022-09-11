@@ -263,5 +263,5 @@
 			}]
 		}
 	},
-	"scopeName": "source.csv"
+	"scopeName": "source.tsv"
 }
